@@ -217,7 +217,7 @@ const copy = {
         role: 'AI Research Intern',
         company: 'Labo de recherche Ibn Tofail & Labo ',
         description: 'Conducted a comparative study of AraBERT and XLM-RoBERTa to investigate which Transformer architecture performs best for Arabic fake news detection. Developed a data-centric pipeline involving dataset cleaning, merging, deduplication, and semantic reduction to construct a balanced dataset. Fine-tuned both pretrained models using PyTorch and Hugging Face Transformers, then evaluated and compared their classification performance using accuracy, precision, recall, F1-score, and ROC-AUC where applicable. Analyzed experimental results to assess model effectiveness for Arabic text classification and identify the most suitable architecture for the task.',
-        logo: publicAsset('uni.jpg'),
+        logo: publicAsset('Uni.jpg'),
         logoAlt: 'Labo de recherche Ibn Tofail & Labo ',
       },
       {
