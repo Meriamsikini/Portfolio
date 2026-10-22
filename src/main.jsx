@@ -217,7 +217,7 @@ const copy = {
         role: 'AI Research Intern',
         company: 'Labo de recherche Ibn Tofail & Labo ',
         description: 'Conducted a comparative study of AraBERT and XLM-RoBERTa to investigate which Transformer architecture performs best for Arabic fake news detection. Developed a data-centric pipeline involving dataset cleaning, merging, deduplication, and semantic reduction to construct a balanced dataset. Fine-tuned both pretrained models using PyTorch and Hugging Face Transformers, then evaluated and compared their classification performance using accuracy, precision, recall, F1-score, and ROC-AUC where applicable. Analyzed experimental results to assess model effectiveness for Arabic text classification and identify the most suitable architecture for the task.',
-        logo: publicAsset('../public/uni.jpg'),
+        logo: publicAsset('uni.jpg'),
         logoAlt: 'Labo de recherche Ibn Tofail & Labo ',
       },
       {
@@ -225,7 +225,7 @@ const copy = {
         role: 'AI Engineer Intern',
         company: 'Slaoui Global Capital · Casablanca',
         description: 'Developed a full-stack AI-powered insurance claims platform integrating intelligent document processing, multimodal damage assessment, and fraud detection. Combined Azure AI Document Intelligence (OCR) and Gemini to extract and structure insurance document data, and leveraged Computer Vision preprocessing with Gemini Vision to analyze accident images. Designed a LangGraph-based AI agent to orchestrate document, image, policy, and claim-history analysis, identify inconsistencies, and generate explainable investigation reports. Built backend services using FastAPI and PostgreSQL to integrate AI workflows into the platform.',
-        logo: publicAsset('../public/SL.jpeg'),
+        logo: publicAsset('SL.jpeg'),
         logoAlt: 'Slaoui Global Capital logo',
       },
       {
@@ -233,7 +233,7 @@ const copy = {
         role: 'AI Engineer Intern',
         company: 'XAI · Rabat',
         description: 'Designed and developed an end-to-end Retrieval-Augmented Generation (RAG) platform for context-aware question answering over news data. Built a data ingestion and semantic retrieval pipeline using NewsAPI, Google Generative AI embeddings, MongoDB Atlas, and K-Nearest Neighbors (KNN) vector search. Integrated Gemini with LangChain to generate context-grounded responses based on retrieved information. Deployed the solution through a FastAPI REST API, containerized the application with Docker, and implemented CI/CD automation using GitHub Actions.',
-        logo: publicAsset('../public/XAI.jpg'),
+        logo: publicAsset('XAI.jpg'),
         logoAlt: 'XAI logo',
       },
     ],
