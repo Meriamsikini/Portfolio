@@ -1,93 +1,44 @@
-# Configuration EmailJS pour le Portfolio
+# EmailJS configuration
 
-## Étapes pour configurer EmailJS
+The contact form sends messages through EmailJS's browser API. Configure the
+three Vite environment variables below before running or building the site.
 
-### 1. Créer un compte EmailJS
-1. Allez sur [https://www.emailjs.com/](https://www.emailjs.com/)
-2. Cliquez sur "Sign Up" pour créer un compte gratuit
-3. Confirmez votre email
+## 1. Set up EmailJS
 
-### 2. Configurer le service email
-1. Dans le dashboard EmailJS, allez dans "Email Services"
-2. Cliquez sur "Add New Service"
-3. Choisissez votre fournisseur email (Gmail recommandé)
-4. Suivez les instructions pour connecter votre compte Gmail
-5. Notez le **Service ID** (ex: service_abc123)
+1. Create an account at [EmailJS](https://www.emailjs.com/).
+2. Add an email service and note its **Service ID**.
+3. Create an email template and note its **Template ID**.
+4. In the template, set the recipient to `meriamsikini@gmail.com`, use
+   `{{from_name}}` as the sender name and `{{from_email}}` as the reply-to
+   address. Include `{{message}}` in the message body.
+5. Copy the account's **Public Key**.
 
-### 3. Créer un template d'email
-1. Allez dans "Email Templates"
-2. Cliquez sur "Create New Template"
-3. Utilisez ce template :
+## 2. Configure local development
 
-```
-Subject: Nouveau message de {{from_name}} - Portfolio
+Vite is configured to load environment files from `src`. The EmailJS values
+should be in `src/.env` (the existing file is already ignored by Git). For a
+new setup, copy `.env.example` to `src/.env` and fill in the values:
 
-From: {{from_name}} ({{from_email}})
-
-Message:
-{{message}}
-
----
-Envoyé depuis le portfolio de Meriam Sikini
+```dotenv
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-4. Dans les paramètres du template :
-   - **To Email**: meriamsikini@gmail.com
-   - **From Name**: {{from_name}}
-   - **Reply To**: {{from_email}}
-5. Notez le **Template ID** (ex: template_xyz789)
+Restart the Vite development server after editing the environment file. The
+contact form reports an explicit configuration message until all three values
+are present. Vite exposes `VITE_*` values to the browser, so use only the
+EmailJS public key here, never a private key.
 
-### 4. Obtenir la clé publique
-1. Allez dans "Account" > "General"
-2. Copiez votre **Public Key** (ex: user_abc123def456)
+## 3. Verify the template fields
 
-### 5. Mettre à jour le code
-Dans le fichier `script.js`, remplacez :
+The form submits these template parameters:
 
-```javascript
-emailjs.init("YOUR_PUBLIC_KEY"); // Remplacez par votre Public Key
-```
+| Variable | Form value |
+| --- | --- |
+| `{{from_name}}` | Visitor's name |
+| `{{from_email}}` | Visitor's email address |
+| `{{message}}` | Visitor's message |
 
-```javascript
-emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-// Remplacez YOUR_SERVICE_ID et YOUR_TEMPLATE_ID
-```
-
-### Exemple de configuration finale :
-```javascript
-emailjs.init("user_abc123def456");
-
-emailjs.send('service_gmail123', 'template_contact456', templateParams)
-```
-
-## Alternative simple : Formspree
-
-Si vous préférez une solution encore plus simple :
-
-1. Allez sur [https://formspree.io/](https://formspree.io/)
-2. Créez un compte gratuit
-3. Créez un nouveau formulaire
-4. Remplacez le formulaire HTML par :
-
-```html
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-  <input type="text" name="name" placeholder="Your name" required />
-  <input type="email" name="email" placeholder="Your email" required />
-  <textarea name="message" placeholder="Your message..." required></textarea>
-  <button type="submit" class="btn btn-primary">Send Message</button>
-</form>
-```
-
-## Test
-1. Après configuration, testez le formulaire
-2. Vérifiez que vous recevez bien l'email à meriamsikini@gmail.com
-3. Vérifiez les spams si vous ne recevez rien
-
-## Limites gratuites
-- **EmailJS**: 200 emails/mois
-- **Formspree**: 50 emails/mois
-
-## Support
-Si vous avez des problèmes, consultez :
-- [Documentation EmailJS](https://www.emailjs.com/docs/)
-- [Documentation Formspree](https://help.formspree.io/)
+Test the form on the deployed site and confirm that the email arrives at the
+configured recipient. Check EmailJS's dashboard and spam folder if it does not.
