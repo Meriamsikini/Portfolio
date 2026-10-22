@@ -1,5 +1,7 @@
 node_modules/
 dist/
+/assets/
+/EMAILJS_SETUP.md
 .vite/
 .vercel/
 coverage/
@@ -14,3 +16,4 @@ yarn-debug.log*
 pnpm-debug.log*
 .DS_Store
 Thumbs.db
+.md

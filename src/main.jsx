@@ -240,7 +240,7 @@ const copy = {
     educationItems: [
       {
         date: '2024 — 2026',
-        degree: 'Master’s in Big Data, AI & Advanced Applications (M2)',
+        degree: 'Master’s in Big Data, AI & Advanced Applications',
         school: 'Ibn Tofail University · Expected graduation 2026',
       },
       {
@@ -414,7 +414,7 @@ const copy = {
     educationItems: [
       {
         date: '2024 — 2026',
-        degree: 'Master Big Data, IA & Applications Avancées (M2)',
+        degree: 'Master Big Data, IA & Applications Avancées',
         school: 'Université Ibn Tofail · Diplôme prévu en 2026',
       },
       {
@@ -606,7 +606,7 @@ function App() {
         <section id="top" className="hero">
           <div className="media">
             <video autoPlay muted loop playsInline poster="/assets/hero-poster.jpg">
-              <source src="/assets/hero-ai-systems.mp4" type="video/mp4" />
+              <source src="../public/assets/hero-ai-systems.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="shade" />
