@@ -260,8 +260,8 @@ const copy = {
   fr: {
     nav: ['Formation', 'Expérience', 'Projets', 'Compétences', 'Certificats', 'Approche', 'Contact'],
     hero: [
-      'INGÉNIEURE IA · MAROC',
-      'Concevoir<br><i>l’intelligence.</i>',
+      'INGÉNIEURE DE DONNÉES ET D'IA · MAROC',
+      'MERIAM<br><i>SIKINI</i>',
       'Je conçois des systèmes intelligents qui relient machine learning, ingénierie des données et logiciel pour créer des applications IA concrètes.',
       'Découvrir mes projets',
       'Voir le CV',
@@ -300,7 +300,7 @@ const copy = {
       'Message envoyé. Merci de m’avoir contactée !',
       'L’e-mail n’est pas encore configuré. Ajoutez vos paramètres EmailJS dans le fichier .env.',
       'Une erreur est survenue lors de l’envoi. Veuillez réessayer.',
-      'Conçu et développé avec intention.',
+      'Conçu et développé avec intention',
     ],
     tags: {
       data: 'Ingénierie des données',
@@ -395,10 +395,18 @@ const copy = {
     ],
     experienceItems: [
       {
-        date: 'MARS 2026 — PRÉSENT',
-        role: 'Stagiaire AI Engineer',
+        date: 'SEP 2026 —  PRESENT',
+        role: 'Stagiaire chercheuse en IA',
+        company: 'Laboratoires de recherche Ibn Tofail & ',
+        description: 'Développement d’une plateforme intelligente de gestion des sinistres automobiles intégrant l’automatisation documentaire, l’analyse multimodale et la détection de fraude. Mise en œuvre de solutions OCR avec Azure AI Document Intelligence et d’extraction et de structuration de données avec Gemini. Intégration de l’analyse d’images d’accidents à l’aide de techniques de prétraitement en vision par ordinateur et de Gemini Vision. Conception d’un agent IA basé sur LangGraph pour analyser les documents, les images, les contrats et l’historique des sinistres, détecter les incohérences et générer des rapports d’investigation explicables. Développement des services backend avec FastAPI et PostgreSQL.',
+        logo: publicAsset('Uni.jpeg'),
+        logoAlt: 'Logo de Slaoui Global Capital',
+      },
+      {
+        date: 'MARS 2026 —  SEP 2026',
+        role: 'Stagiaire Ingénieure AI',
         company: 'Slaoui Global Capital · Casablanca',
-        description: 'Développement de workflows IA pour une plateforme de gestion des sinistres : intelligence documentaire, évaluation multimodale des dommages, agents d’investigation de fraude et services backend FastAPI / PostgreSQL.',
+        description: 'Développement d’une plateforme intelligente de gestion des sinistres automobiles intégrant l’automatisation documentaire, l’analyse multimodale et la détection de fraude. Mise en œuvre de solutions OCR avec Azure AI Document Intelligence et d’extraction et de structuration de données avec Gemini. Intégration de l’analyse d’images d’accidents à l’aide de techniques de prétraitement en vision par ordinateur et de Gemini Vision. Conception d’un agent IA basé sur LangGraph pour analyser les documents, les images, les contrats et l’historique des sinistres, détecter les incohérences et générer des rapports d’investigation explicables. Développement des services backend avec FastAPI et PostgreSQL.',
         logo: publicAsset('SL.jpeg'),
         logoAlt: 'Logo de Slaoui Global Capital',
       },
@@ -406,7 +414,7 @@ const copy = {
         date: 'JUIN 2025 — OCT. 2025',
         role: 'Stagiaire AI Engineer',
         company: 'XAI · Rabat',
-        description: 'Développement d’une plateforme RAG de bout en bout sur des données d’actualité : ingestion, recherche sémantique, réponses avec Gemini, API REST FastAPI, Docker et CI/CD GitHub Actions.',
+        description: 'Conception et développement d’une plateforme de génération augmentée par récupération (RAG) permettant de produire des réponses contextualisées à partir de données issues de l’actualité. Mise en place d’un pipeline d’ingestion et de recherche sémantique combinant NewsAPI, les embeddings de Google Generative AI, MongoDB Atlas et la recherche vectorielle par K plus proches voisins (KNN). Intégration de Gemini avec LangChain pour générer des réponses fondées sur les informations récupérées. Développement d’une API REST avec FastAPI, conteneurisation de l’application avec Docker et automatisation du pipeline CI/CD avec GitHub Actions.',
         logo: publicAsset('XAI.jpg'),
         logoAlt: 'Logo de XAI',
       },
