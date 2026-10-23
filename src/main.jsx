@@ -399,7 +399,7 @@ const copy = {
         role: 'Stagiaire chercheuse en IA',
         company: 'Laboratoires de recherche Ibn Tofail & ',
         description: 'Développement d’une plateforme intelligente de gestion des sinistres automobiles intégrant l’automatisation documentaire, l’analyse multimodale et la détection de fraude. Mise en œuvre de solutions OCR avec Azure AI Document Intelligence et d’extraction et de structuration de données avec Gemini. Intégration de l’analyse d’images d’accidents à l’aide de techniques de prétraitement en vision par ordinateur et de Gemini Vision. Conception d’un agent IA basé sur LangGraph pour analyser les documents, les images, les contrats et l’historique des sinistres, détecter les incohérences et générer des rapports d’investigation explicables. Développement des services backend avec FastAPI et PostgreSQL.',
-        logo: publicAsset('Uni.jpeg'),
+        logo: publicAsset('Uni.jpg'),
         logoAlt: 'Logo de Slaoui Global Capital',
       },
       {
