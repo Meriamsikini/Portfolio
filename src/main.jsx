@@ -260,7 +260,7 @@ const copy = {
   fr: {
     nav: ['Formation', 'Expérience', 'Projets', 'Compétences', 'Certificats', 'Approche', 'Contact'],
     hero: [
-      'INGÉNIEURE DE DONNÉES ET D'IA · MAROC',
+      "INGÉNIEURE DE DONNÉES ET D'IA · MAROC",
       'MERIAM<br><i>SIKINI</i>',
       'Je conçois des systèmes intelligents qui relient machine learning, ingénierie des données et logiciel pour créer des applications IA concrètes.',
       'Découvrir mes projets',
