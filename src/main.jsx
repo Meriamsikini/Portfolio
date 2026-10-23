@@ -215,7 +215,7 @@ const copy = {
       {
         date: 'SEP 2026 — PRESENT',
         role: 'AI Research Intern',
-        company: 'Labo de recherche Ibn Tofail & Labo ',
+        company: 'LaRI Laboratory , Faculty of Sciences, Ibn Tofail University, Kenitra, Morocco × Sapienza NLP Laboratory, Sapienza University of Rome, Italy ',
         description: 'Conducted a comparative study of AraBERT and XLM-RoBERTa to investigate which Transformer architecture performs best for Arabic fake news detection. Developed a data-centric pipeline involving dataset cleaning, merging, deduplication, and semantic reduction to construct a balanced dataset. Fine-tuned both pretrained models using PyTorch and Hugging Face Transformers, then evaluated and compared their classification performance using accuracy, precision, recall, F1-score, and ROC-AUC where applicable. Analyzed experimental results to assess model effectiveness for Arabic text classification and identify the most suitable architecture for the task.',
         logo: publicAsset('Uni.jpg'),
         logoAlt: 'Labo de recherche Ibn Tofail & Labo ',
@@ -396,11 +396,11 @@ const copy = {
     experienceItems: [
       {
         date: 'SEP 2026 —  PRESENT',
-        role: 'Stagiaire chercheuse en IA',
-        company: 'Laboratoires de recherche Ibn Tofail & ',
-        description: 'Développement d’une plateforme intelligente de gestion des sinistres automobiles intégrant l’automatisation documentaire, l’analyse multimodale et la détection de fraude. Mise en œuvre de solutions OCR avec Azure AI Document Intelligence et d’extraction et de structuration de données avec Gemini. Intégration de l’analyse d’images d’accidents à l’aide de techniques de prétraitement en vision par ordinateur et de Gemini Vision. Conception d’un agent IA basé sur LangGraph pour analyser les documents, les images, les contrats et l’historique des sinistres, détecter les incohérences et générer des rapports d’investigation explicables. Développement des services backend avec FastAPI et PostgreSQL.',
+        role: 'Stagiaire chercheuse en IA ',
+        company: 'Laboratoire LaRI, Faculté des Sciences, Université Ibn Tofaïl, Kénitra, Maroc × Laboratoire Sapienza NLP, Italie',
+        description: 'Réalisation d’une étude comparative visant à déterminer quelle architecture Transformer, AraBERT ou XLM-RoBERTa, est la plus performante pour la détection de fake news en arabe. Développement d’un pipeline de préparation des données comprenant le nettoyage, la fusion, la déduplication, le filtrage et l’étiquetage des articles. Application de méthodes d’analyse sémantique fondées sur les embeddings et le clustering afin de réduire le corpus d’actualités réelles tout en conservant un ensemble de données représentatif. Constitution d’un corpus équilibré de 20 000 articles, comprenant 10 000 articles réels et 10 000 articles faux. Fine-tuning et évaluation des deux modèles avec PyTorch et Hugging Face Transformers, puis comparaison de leurs performances à l’aide de métriques de classification afin d’analyser leurs forces et leurs limites pour le traitement automatique du langage arabe.',
         logo: publicAsset('Uni.jpg'),
-        logoAlt: 'Logo de Slaoui Global Capital',
+        logoAlt: 'Logo de université ibn tofail',
       },
       {
         date: 'MARS 2026 —  SEP 2026',
@@ -625,7 +625,7 @@ function App() {
             <p>{t.hero[2]}</p>
             <div>
               <a className="cta" href="#work">{t.hero[3]} <b>↘</b></a>
-              <a className="link" href="https://docs.google.com/document/d/1zByEoOyPlCQHJ3QNPegcf49-jtActAJW5HmgvOBdQ28/edit?usp=sharing" target="_blank" rel="noreferrer">{t.hero[4]} ↗</a>
+              <a className="link" href="https://drive.google.com/file/d/1Uu39XRi2DpU6mwE94ua3EwkkGI05O3WV/view?usp=sharing" target="_blank" rel="noreferrer">{t.hero[4]} ↗</a>
             </div>
           </div>
         </section>
@@ -823,7 +823,7 @@ function App() {
             <div className="social">
               <a href="https://github.com/Meriamsikini" target="_blank" rel="noreferrer">GitHub ↗</a>
               <a href="https://www.linkedin.com/in/meriam-sikini/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-              <a href="https://docs.google.com/document/d/1zByEoOyPlCQHJ3QNPegcf49-jtActAJW5HmgvOBdQ28/edit?usp=sharing" target="_blank" rel="noreferrer">{lang === 'fr' ? 'CV' : 'Resume'} ↗</a>
+              <a href="https://drive.google.com/file/d/1Uu39XRi2DpU6mwE94ua3EwkkGI05O3WV/view?usp=sharing" target="_blank" rel="noreferrer">{lang === 'fr' ? 'CV' : 'Resume'} ↗</a>
             </div>
           </div>
           <footer>© {new Date().getFullYear()} MERIAM SIKINI <span>{t.contact[11]}</span></footer>
