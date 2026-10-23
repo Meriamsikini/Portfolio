@@ -613,8 +613,9 @@ function App() {
       <main id="main">
         <section id="top" className="hero">
           <div className="media">
-            <video autoPlay muted loop playsInline poster="/assets/hero-poster.jpg">
-              <source src="../public/assets/hero-ai-systems.mp4" type="video/mp4" />
+            <video autoPlay muted loop playsInline poster={`${import.meta.env.BASE_URL}assets/hero-poster.jpg`}>
+              <source src={`${import.meta.env.BASE_URL}assets/hero-ai-systems.mp4`} type="video/mp4" />
+            
             </video>
           </div>
           <div className="shade" />
