@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { ArrowDownRight, ArrowUpRight, BrainCircuit, BriefcaseBusiness, CodeXml, GraduationCap, Mail, MapPin, Menu, Moon, Network, Sun, X } from 'lucide-react';
 import './styles.css';
 
 const publicAsset = path => `${import.meta.env.BASE_URL}${path.split('/').map(encodeURIComponent).join('/')}`;
@@ -64,6 +65,8 @@ const projects = [
 ];
 
 const filters = ['data', 'ml','deep-learning','computer-vision', 'analytics', 'bigdata', 'llm', 'streaming', 'scraping'];
+const marqueeSkills = ['Python', 'PyTorch', 'TensorFlow', 'Computer Vision', 'NLP', 'LLMs & RAG', 'LangGraph', 'FastAPI', 'Spark', 'Kafka', 'BigQuery', 'dbt'];
+const profileIcons = [MapPin, GraduationCap, BrainCircuit, BriefcaseBusiness];
 const navigation = ['education', 'experience', 'work', 'skills', 'certificates', 'approach', 'contact'];
 const routeSections = ['top', 'vision', ...navigation];
 const deploymentBase = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -80,35 +83,40 @@ const copy = {
     hero: [
       'DATA & AI ENGINEER · MOROCCO',
       'MERIAM<br><i>SIKINI</i>',
-      'I build intelligent systems that connect machine learning, data engineering, and software into practical AI applications.',
+      'I build practical AI applications across machine learning, data engineering, and software.',
       'Explore my work',
       'View resume',
     ],
     vision: [
-      'VISION',
-      'From raw data<br>to <i>useful intelligence.</i>',
-      'I approach AI as an engineering discipline: reliable data, explicit evaluation, model capabilities, and interfaces people can use.',
-      'My work spans data pipelines, retrieval systems, computer vision, and production-minded application layers - translating complex inputs into decisions and usable tools.',
+      'ABOUT ME',
+      'AI engineering,<br><i>built end to end.</i>',
+      'I’m Meriam Sikini, an AI Engineer focused on turning data and models into useful applications. I build across the full path: preparing data, training and evaluating models, then connecting them to dependable APIs and interfaces.',
     ],
-    education: ['EDUCATION', 'The foundations<br>behind <i>the work.</i>'],
-    experience: ['EXPERIENCE', 'Building systems<br>in <i>the real world.</i>'],
+    profile: [
+      ['Location', 'Morocco'],
+      ['Education', 'MSc · Big Data & AI'],
+      ['Focus', 'ML · LLMs · Computer Vision'],
+      ['Career paths', 'AI Engineer · ML Engineer · Data Scientist'],
+    ],
+    education: ['EDUCATION', 'Education & <i>training.</i>'],
+    experience: ['EXPERIENCE', 'Applied AI <i>experience.</i>', 'Read details'],
     work: [
       'SELECTED WORK',
-      'Systems with<br><i>real constraints.</i>',
+      'Selected <i>projects.</i>',
       'Documented projects across data, AI, and applied analytics.',
       'All projects',
       'Repository',
     ],
     approach: [
       'ENGINEERING APPROACH',
-      'A system is more<br>than its <i>model.</i>',
+      'How I <i>build.</i>',
       'The implementation changes with the problem. The principle does not: make data flows visible, keep decisions explainable, and design for the people who use the system.',
     ],
-    skills: ['SKILLS', 'Tools for the<br><i>whole system.</i>'],
-    certificates: ['CERTIFICATES', 'Learning, made <i>visible.</i>'],
+    skills: ['SKILLS', 'Skills & <i>tools.</i>'],
+    certificates: ['CERTIFICATES', 'Certifications <i>& learning.</i>'],
     contact: [
       'CONTACT',
-      'Have a system<br>worth <i>building?</i>',
+      'Let’s build <i>something useful.</i>',
       'I’m open to AI engineering, machine learning, and data-focused opportunities.',
       'Name',
       'Email',
@@ -262,35 +270,40 @@ const copy = {
     hero: [
       "INGÉNIEURE DE DONNÉES ET D'IA · MAROC",
       'MERIAM<br><i>SIKINI</i>',
-      'Je conçois des systèmes intelligents qui relient machine learning, ingénierie des données et logiciel pour créer des applications IA concrètes.',
+      'Je conçois des applications IA concrètes, du machine learning à l’ingénierie des données.',
       'Découvrir mes projets',
       'Voir le CV',
     ],
     vision: [
-      'VISION',
-      'Des données brutes<br>à une <i>intelligence utile.</i>',
-      'J’aborde l’IA comme une discipline d’ingénierie : des données fiables, une évaluation explicite, des capacités de modèles et des interfaces réellement utilisables.',
-      'Mon travail couvre les pipelines de données, les systèmes de recherche, la vision par ordinateur et les couches applicatives orientées production - pour transformer des entrées complexes en décisions et outils utiles.',
+      'À PROPOS',
+      'Ingénierie IA,<br><i>de bout en bout.</i>',
+      'Je suis Meriam Sikini, ingénieure en IA. Je transforme données et modèles en applications utiles : préparation des données, entraînement et évaluation, puis intégration dans des API et interfaces fiables.',
     ],
-    education: ['FORMATION', 'Les fondations<br>de <i>mon parcours.</i>'],
-    experience: ['EXPÉRIENCE', 'Des systèmes<br><i>en situation réelle.</i>'],
+    profile: [
+      ['Localisation', 'Maroc'],
+      ['Formation', 'Master · Big Data & IA'],
+      ['Spécialités', 'ML · LLMs · Vision par ordinateur'],
+      ['Perspectives', 'Ingénieure IA · ML · Data Scientist'],
+    ],
+    education: ['FORMATION', 'Études & <i>formation.</i>'],
+    experience: ['EXPÉRIENCE', 'Expérience <i>appliquée.</i>', 'Lire les détails'],
     work: [
       'PROJETS SÉLECTIONNÉS',
-      'Des systèmes aux<br><i>contraintes réelles.</i>',
+      'Projets <i>sélectionnés.</i>',
       'Des projets documentés en données, IA et analytique appliquée.',
       'Tous les projets',
       'Dépôt',
     ],
     approach: [
       'APPROCHE D’INGÉNIERIE',
-      'Un système est plus<br>que son <i>modèle.</i>',
+      'Ma façon <i>de construire.</i>',
       'L’implémentation change selon le problème. Le principe reste le même : rendre les flux de données visibles, garder les décisions explicables et concevoir pour les personnes qui utilisent le système.',
     ],
-    skills: ['COMPÉTENCES', 'Des outils pour<br><i>tout le système.</i>'],
-    certificates: ['CERTIFICATS', 'Apprendre, <i>concrètement.</i>'],
+    skills: ['COMPÉTENCES', 'Compétences <i>& outils.</i>'],
+    certificates: ['CERTIFICATS', 'Certifications <i>& apprentissage.</i>'],
     contact: [
       'CONTACT',
-      'Un système qui mérite<br>d’être <i>construit ?</i>',
+      'Construisons <i>quelque chose d’utile.</i>',
       'Je suis ouverte aux opportunités en ingénierie IA, machine learning et data.',
       'Nom',
       'E-mail',
@@ -456,8 +469,10 @@ function drivePreviewUrl(link) {
 
 function App() {
   const [lang, setLang] = useState(localStorage.getItem('portfolio-language') || 'en');
+  const [theme, setTheme] = useState(localStorage.getItem('portfolio-theme') || 'light');
   const [filter, setFilter] = useState('all');
   const [menu, setMenu] = useState(false);
+  const [activeSection, setActiveSection] = useState('top');
   const [sending, setSending] = useState(false);
   const [formStatus, setFormStatus] = useState({ type: '', message: '' });
   const t = copy[lang];
@@ -469,13 +484,31 @@ function App() {
   }, [lang]);
 
   useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#111916' : '#f7f7f2');
+  }, [theme]);
+
+  useEffect(() => {
+    if (!('IntersectionObserver' in window)) return undefined;
+    document.documentElement.classList.add('js-reveal');
     const observer = new IntersectionObserver(
       entries => entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('in')),
       { threshold: 0.12 },
     );
     document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      document.documentElement.classList.remove('js-reveal');
+    };
   }, []);
+
+  useEffect(() => {
+    if (!menu) return undefined;
+    const closeOnEscape = event => event.key === 'Escape' && setMenu(false);
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, [menu]);
 
   useEffect(() => {
     let scrollFrame = 0;
@@ -488,6 +521,11 @@ function App() {
 
     const updatePathFromScroll = () => {
       scrollFrame = 0;
+      const readingProgress = document.querySelector('.reading-progress');
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (readingProgress) {
+        readingProgress.style.transform = `scaleX(${scrollableHeight > 0 ? Math.min(1, window.scrollY / scrollableHeight) : 0})`;
+      }
       const activationLine = window.innerHeight * 0.35;
       let activeSection = 'top';
 
@@ -498,6 +536,7 @@ function App() {
         }
       });
 
+      setActiveSection(current => current === activeSection ? current : activeSection);
       const nextPath = `${getPathForSection(activeSection)}${window.location.search}`;
       if (window.location.pathname !== getPathForSection(activeSection)) {
         window.history.replaceState(null, '', nextPath);
@@ -587,46 +626,59 @@ function App() {
   return (
     <>
       <a className="skip" href="#main">{lang === 'fr' ? 'Aller au contenu' : 'Skip to content'}</a>
+      <div className="reading-progress" aria-hidden="true" />
       <header>
         <a className="brand" href="#top">MERIAM <span>SIKINI</span></a>
-        <nav aria-label={lang === 'fr' ? 'Navigation principale' : 'Primary navigation'}>
+        <nav id="site-menu" className={`site-menu${menu ? ' is-open' : ''}`} aria-label={lang === 'fr' ? 'Navigation principale' : 'Primary navigation'}>
           {navigation.map((section, index) => (
-            <a key={section} href={`#${section}`}>{t.nav[index]}</a>
+            <a key={section} className={`${activeSection === section ? 'active' : ''}${section === 'contact' ? ' nav-contact' : ''}`} onClick={() => setMenu(false)} href={`#${section}`} aria-current={activeSection === section ? 'location' : undefined}>
+              <span>{section === 'contact' ? (lang === 'fr' ? 'Me contacter' : 'Contact me') : t.nav[index]}</span><ArrowUpRight size={16} strokeWidth={1.7} aria-hidden="true" />
+            </a>
           ))}
         </nav>
         <div className="actions">
           <button className={lang === 'en' ? 'on' : ''} onClick={() => setLang('en')} aria-pressed={lang === 'en'}>EN</button>
           /
           <button className={lang === 'fr' ? 'on' : ''} onClick={() => setLang('fr')} aria-pressed={lang === 'fr'}>FR</button>
-          <button className="hamb" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-label={lang === 'fr' ? 'Ouvrir le menu' : 'Open menu'}>
-            <b></b><b></b>
+          <button className="theme-toggle" onClick={() => setTheme(current => current === 'dark' ? 'light' : 'dark')} aria-label={lang === 'fr' ? 'Changer de thème' : 'Toggle theme'} aria-pressed={theme === 'dark'} title={lang === 'fr' ? 'Changer de thème' : 'Toggle theme'}>
+            {theme === 'dark' ? <Sun size={16} strokeWidth={1.8} aria-hidden="true" /> : <Moon size={16} strokeWidth={1.8} aria-hidden="true" />}
+          </button>
+          <button className="hamb" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-controls="site-menu" aria-label={menu ? (lang === 'fr' ? 'Fermer le menu' : 'Close menu') : (lang === 'fr' ? 'Ouvrir le menu' : 'Open menu')}>
+            {menu ? <X size={19} strokeWidth={1.8} /> : <Menu size={19} strokeWidth={1.8} />}
           </button>
         </div>
-        {menu && (
-          <nav className="mobile" aria-label={lang === 'fr' ? 'Navigation mobile' : 'Mobile navigation'}>
-            {navigation.map((section, index) => (
-              <a key={section} onClick={() => setMenu(false)} href={`#${section}`}>{t.nav[index]}</a>
-            ))}
-          </nav>
-        )}
       </header>
       <main id="main">
         <section id="top" className="hero">
-          <div className="media">
-            <video autoPlay muted loop playsInline poster={`${import.meta.env.BASE_URL}assets/hero-poster.jpg`}>
-              <source src={`${import.meta.env.BASE_URL}assets/hero-ai-systems.mp4`} type="video/mp4" />
-            
-            </video>
-          </div>
-          <div className="shade" />
           <div className="heroText reveal">
             <p className="eyebrow">{t.hero[0]}</p>
             <h1><HTML>{t.hero[1]}</HTML></h1>
             <p>{t.hero[2]}</p>
-            <div>
-              <a className="cta" href="#work">{t.hero[3]} <b>↘</b></a>
-              <a className="link" href="https://drive.google.com/file/d/1Uu39XRi2DpU6mwE94ua3EwkkGI05O3WV/view?usp=sharing" target="_blank" rel="noreferrer">{t.hero[4]} ↗</a>
-            </div>
+            <a className="cta" href="#work">{t.hero[3]} <ArrowDownRight size={17} strokeWidth={1.8} aria-hidden="true" /></a>
+            <a className="link" href="https://drive.google.com/file/d/1Uu39XRi2DpU6mwE94ua3EwkkGI05O3WV/view?usp=sharing" target="_blank" rel="noreferrer">{t.hero[4]} <ArrowUpRight size={15} strokeWidth={1.8} aria-hidden="true" /></a>
+          </div>
+          <aside className="profile-card reveal" aria-label={lang === 'fr' ? 'Profil en bref' : 'Profile at a glance'}>
+            <dl>
+              {t.profile.map(([label, value], index) => {
+                const Icon = profileIcons[index];
+                return (
+                  <div key={label}>
+                    <dt><Icon size={15} strokeWidth={1.7} aria-hidden="true" />{label}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                );
+              })}
+            </dl>
+          </aside>
+        </section>
+
+        <section className="skill-ticker" aria-label={lang === 'fr' ? 'Technologies et compétences' : 'Technologies and skills'}>
+          <div className="ticker-track">
+            {[0, 1].map(copyIndex => (
+              <div className="ticker-set" aria-hidden={copyIndex === 1} key={copyIndex}>
+                {marqueeSkills.map(skill => <span key={skill}>{skill}<i aria-hidden="true">·</i></span>)}
+              </div>
+            ))}
           </div>
         </section>
 
@@ -636,7 +688,6 @@ function App() {
             <h2><HTML>{t.vision[1]}</HTML></h2>
             <div>
               <p>{t.vision[2]}</p>
-              <p>{t.vision[3]}</p>
               <a className="link dark" href="#approach">{lang === 'fr' ? 'Mon approche' : 'How I build'} ↓</a>
             </div>
           </div>
@@ -672,19 +723,18 @@ function App() {
                   <img src={item.logo} alt={item.logoAlt} loading="lazy" />
                   <div><h3>{item.role}</h3><p>{item.company}</p></div>
                 </div>
-                <p>{item.description}</p>
+                <details className="experience-details">
+                  <summary>{t.experience[2]}</summary>
+                  <p>{item.description}</p>
+                </details>
               </article>
             ))}
           </div>
         </section>
 
         <section id="work" className="work pad">
-          <div className="section-video-banner work-banner">
-            <video className="section-background-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
-              <source src={`${import.meta.env.BASE_URL}videos/6153453-sd_640_338_25fps.mp4`} type="video/mp4" />
-            </video>
-            <div className="section-background-shade" />
-            <div className="section-video-content reveal">
+          <div className="section-banner work-banner">
+            <div className="section-content reveal">
               <p className="index">04 / {t.work[0]}</p>
               <h2><HTML>{t.work[1]}</HTML></h2>
               <p>{t.work[2]}</p>
@@ -716,7 +766,7 @@ function App() {
                   </div>
                   <div className="pside">
                     <div>{project.tags.map(tag => <em key={tag}>{t.tags[tag]}</em>)}</div>
-                    <a href={project.url} target="_blank" rel="noreferrer">{t.work[4]} <b>↗</b></a>
+                    <a href={project.url} target="_blank" rel="noreferrer">{t.work[4]} <ArrowUpRight size={16} strokeWidth={1.8} aria-hidden="true" /></a>
                   </div>
                 </article>
               );
@@ -741,11 +791,6 @@ function App() {
             <p className="index">06 / {t.certificates[0]}</p>
             <h2><HTML>{t.certificates[1]}</HTML></h2>
           </div>
-          <p className="certificate-hint">
-            {lang === 'fr'
-              ? 'Survolez un titre ou sélectionnez-le au clavier pour afficher le certificat.'
-              : 'Hover over a title or focus it with the keyboard to preview its certificate.'}
-          </p>
           <div className="certificate-grid">
             {t.certificateItems.map(certificate => {
               const previewUrl = drivePreviewUrl(certificate.driveUrl);
@@ -774,14 +819,11 @@ function App() {
         </section>
 
         <section id="approach" className="approach pad">
-          <div className="section-video-banner approach-banner">
-            <video className="section-background-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
-              <source src={`${import.meta.env.BASE_URL}videos/12433512-20s.mp4`} type="video/mp4" />
-            </video>
-            <div className="section-background-shade" />
-            <div className="section-video-content reveal">
+          <div className="section-banner approach-banner">
+            <div className="section-content reveal">
               <p className="index">07 / {t.approach[0]}</p>
               <h2><HTML>{t.approach[1]}</HTML></h2>
+              <p>{t.approach[2]}</p>
             </div>
           </div>
           <div className="flow reveal">
@@ -798,16 +840,14 @@ function App() {
               </React.Fragment>
             ))}
           </div>
-          <p className="note reveal">{t.approach[2]}</p>
         </section>
 
         <section id="contact" className="contact pad">
-          <div className="orb" />
           <div className="contact-content reveal">
             <p className="index">09 / {t.contact[0]}</p>
             <h2><HTML>{t.contact[1]}</HTML></h2>
             <p>{t.contact[2]}</p>
-            <a className="email" href="mailto:meriamsikini@gmail.com">meriamsikini@gmail.com ↗</a>
+            <a className="email" href="mailto:meriamsikini@gmail.com"><Mail size={16} strokeWidth={1.8} aria-hidden="true" /> meriamsikini@gmail.com <ArrowUpRight size={15} strokeWidth={1.8} aria-hidden="true" /></a>
             <form className="contact-form" onSubmit={handleContactSubmit}>
               <label>{t.contact[3]}<input name="from_name" type="text" autoComplete="name" required /></label>
               <label>{t.contact[4]}<input name="from_email" type="email" autoComplete="email" required /></label>
@@ -821,9 +861,9 @@ function App() {
               )}
             </form>
             <div className="social">
-              <a href="https://github.com/Meriamsikini" target="_blank" rel="noreferrer">GitHub ↗</a>
-              <a href="https://www.linkedin.com/in/meriam-sikini/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-              <a href="https://drive.google.com/file/d/1Uu39XRi2DpU6mwE94ua3EwkkGI05O3WV/view?usp=sharing" target="_blank" rel="noreferrer">{lang === 'fr' ? 'CV' : 'Resume'} ↗</a>
+              <a href="https://github.com/Meriamsikini" target="_blank" rel="noreferrer"><CodeXml size={16} strokeWidth={1.8} aria-hidden="true" /> GitHub <ArrowUpRight size={13} aria-hidden="true" /></a>
+              <a href="https://www.linkedin.com/in/meriam-sikini/" target="_blank" rel="noreferrer"><Network size={16} strokeWidth={1.8} aria-hidden="true" /> LinkedIn <ArrowUpRight size={13} aria-hidden="true" /></a>
+              <a href="https://drive.google.com/file/d/1Uu39XRi2DpU6mwE94ua3EwkkGI05O3WV/view?usp=sharing" target="_blank" rel="noreferrer">{lang === 'fr' ? 'CV' : 'Resume'} <ArrowUpRight size={13} aria-hidden="true" /></a>
             </div>
           </div>
           <footer>© {new Date().getFullYear()} MERIAM SIKINI <span>{t.contact[11]}</span></footer>
