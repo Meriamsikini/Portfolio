@@ -655,7 +655,7 @@ function App() {
             <h1><HTML>{t.hero[1]}</HTML></h1>
             <p>{t.hero[2]}</p>
             <a className="cta" href="#work">{t.hero[3]} <ArrowDownRight size={17} strokeWidth={1.8} aria-hidden="true" /></a>
-            <a className="link" href="https://drive.google.com/file/d/1Uu39XRi2DpU6mwE94ua3EwkkGI05O3WV/view?usp=sharing" target="_blank" rel="noreferrer">{t.hero[4]} <ArrowUpRight size={15} strokeWidth={1.8} aria-hidden="true" /></a>
+            <a className="link" href="https://drive.google.com/file/d/1GGwzYCN48k5xTlSxOjZAH_6BpvKEqg9G/view?usp=sharing" target="_blank" rel="noreferrer">{t.hero[4]} <ArrowUpRight size={15} strokeWidth={1.8} aria-hidden="true" /></a>
           </div>
           <aside className="profile-card reveal" aria-label={lang === 'fr' ? 'Profil en bref' : 'Profile at a glance'}>
             <dl>
@@ -863,7 +863,7 @@ function App() {
             <div className="social">
               <a href="https://github.com/Meriamsikini" target="_blank" rel="noreferrer"><CodeXml size={16} strokeWidth={1.8} aria-hidden="true" /> GitHub <ArrowUpRight size={13} aria-hidden="true" /></a>
               <a href="https://www.linkedin.com/in/meriam-sikini/" target="_blank" rel="noreferrer"><Network size={16} strokeWidth={1.8} aria-hidden="true" /> LinkedIn <ArrowUpRight size={13} aria-hidden="true" /></a>
-              <a href="https://drive.google.com/file/d/1Uu39XRi2DpU6mwE94ua3EwkkGI05O3WV/view?usp=sharing" target="_blank" rel="noreferrer">{lang === 'fr' ? 'CV' : 'Resume'} <ArrowUpRight size={13} aria-hidden="true" /></a>
+              <a href="https://drive.google.com/file/d/1GGwzYCN48k5xTlSxOjZAH_6BpvKEqg9G/view?usp=sharing" target="_blank" rel="noreferrer">{lang === 'fr' ? 'CV' : 'Resume'} <ArrowUpRight size={13} aria-hidden="true" /></a>
             </div>
           </div>
           <footer>© {new Date().getFullYear()} MERIAM SIKINI <span>{t.contact[11]}</span></footer>
